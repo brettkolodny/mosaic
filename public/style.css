@@ -5,9 +5,8 @@ body {
   flex-direction: row;
   justify-content: center; */
   overflow: hidden;
-  border: solid red;
 }
 
 #root {
-  border: solid black;
+  background-color: #f5f7fa;
 }

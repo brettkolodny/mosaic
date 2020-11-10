@@ -2,5 +2,11 @@
   font-size: 38px;
   text-align: center;
   margin: 0 auto;
-  line-height: 128px;
+  color: #e4e7eb;
+}
+
+#account-info > svg {
+  width: 38px;
+  height: 38px;
+  margin: 0 auto;
 }

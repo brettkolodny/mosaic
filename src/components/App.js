@@ -9,6 +9,6 @@ export default function Main() {
   if (!loggedIn) {
     return <Login setLoggedIn={setLoggedIn} />;
   } else {
-    return <Home />;
+    return <Home setLoggedIn={setLoggedIn} />;
   }
 }
