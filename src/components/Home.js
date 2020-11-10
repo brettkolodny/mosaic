@@ -14,6 +14,11 @@ import "../css/Home.css";
 export default function Main() {
   const networks = [
     {
+      name: "Development",
+      icon: <DevIcon />,
+      conn: "ws://127.0.0.1:9944",
+    },
+    {
       name: "Polkadot",
       icon: <PolkadotIcon />,
       conn: "wss://rpc.polkadot.io",
@@ -22,11 +27,6 @@ export default function Main() {
       name: "Westend",
       icon: <WestendIcon />,
       conn: "wss://westend-rpc.polkadot.io",
-    },
-    {
-      name: "Development",
-      icon: <DevIcon />,
-      conn: "ws://127.0.0.1:9944",
     },
   ];
 

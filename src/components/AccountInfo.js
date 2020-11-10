@@ -15,7 +15,7 @@ export default function Main(props) {
         }
       );
 
-      setBalanceUnsub(unsub);
+      setBalanceUnsub(() => unsub);
     }
 
     if (currentAccount && api) {
@@ -29,5 +29,9 @@ export default function Main(props) {
     };
   }, [api]);
 
-  return <div id="account-info">{balance}</div>;
+  return (
+    <div id="account-info">
+      <div id="balance">{balance}</div>
+    </div>
+  );
 }
