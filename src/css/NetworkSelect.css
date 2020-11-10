@@ -1,0 +1,88 @@
+@keyframes show {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 0px;
+  }
+}
+
+@keyframes hide {
+  from {
+    left: 0px;
+  }
+  to {
+    left: -150px;
+  }
+}
+
+#network-dd {
+  position: relative;
+  top: 7px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+#current-network > svg {
+  width: 32px;
+  height: 32px;
+}
+
+#current-network > svg:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+  /* animation: hide 0.1s linear 0s 1;
+  left: -150px;
+  top: 0px; */
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: absolute;
+  animation: show 0.1s linear 0s 1;
+  top: 0;
+  left: 0;
+  filter: drop-shadow(4px 0px 4px rgba(0, 0, 0, 0.25));
+}
+
+#network-dd-items {
+  position: fixed;
+  width: 200px;
+  height: 600px;
+  background-color: lightskyblue;
+  z-index: 0;
+}
+
+#network-dd-items svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+.network-dd-item {
+  display: flex;
+  flex-direction: row;
+  float: left;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  width: 150px;
+}
+
+.network-dd-item:hover {
+  background-color: white;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  cursor: pointer;
+}

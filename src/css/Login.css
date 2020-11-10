@@ -1,0 +1,46 @@
+#login {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#title {
+  margin-top: 20vh;
+  text-align: center;
+  font-size: 64px;
+}
+
+#login-form {
+  width: 100%;
+  margin-top: 30vh;
+  text-align: center;
+  justify-self: center;
+}
+
+#password-input {
+  margin: 0 auto;
+  width: 272px;
+  height: 48px;
+  background-color: lightgray;
+  border-radius: 100px;
+  border: none;
+  padding-left: 10px;
+  font-size: 24px;
+}
+
+#password-input:focus {
+  border: none;
+}
+
+#unlock {
+  position: fixed;
+  left: 290px;
+  top: 425px;
+  width: 32px;
+  height: 32px;
+}
+
+#unlock:hover {
+  cursor: pointer;
+}
