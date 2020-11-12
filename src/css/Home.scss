@@ -20,6 +20,18 @@
   margin-top: 8px;
   margin-bottom: 32px;
   color: #1f2933;
+
+  #down-icon {
+    position: absolute;
+    width: 0px;
+    float: right;
+    left: 250px;
+    top: 62px;
+
+    svg:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 #account-info {

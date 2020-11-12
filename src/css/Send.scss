@@ -1,0 +1,92 @@
+.input-error {
+  border: solid 3px #ef4e4e;
+}
+
+.input-error:focus {
+  border: solid 3px #ef4e4e;
+}
+
+.input-valid {
+  border: solid 3px #ff8cba;
+}
+
+.input-valid:focus {
+  border: solid 3px #e8368f;
+}
+
+#send-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 384px;
+  height: 600px;
+  background-color: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  svg {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  svg:hover {
+    cursor: pointer;
+  }
+
+  input {
+    border-width: 3px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+  #to-input {
+    width: 256px;
+    height: 48px;
+  }
+
+  #amount-input {
+    width: 128px;
+    height: 48px;
+  }
+
+  div {
+    margin-left: 40px;
+
+    label {
+      background-color: gray;
+      position: relative;
+      padding-left: 4px;
+      padding-right: 4px;
+      background-color: #f5f7fa;
+      color: #323f4b;
+    }
+
+    #amount-input-label {
+      top: -25px;
+      left: -120px;
+    }
+
+    #to-input-label {
+      top: -25px;
+      left: -245px;
+    }
+
+    #send-button {
+      padding: 10px;
+      width: 180px;
+      text-align: center;
+      font-size: 24px;
+      background-color: #e8368f;
+      color: #e4e7eb;
+      border-radius: 10px;
+    }
+
+    #send-button:hover {
+      cursor: pointer;
+    }
+  }
+}
