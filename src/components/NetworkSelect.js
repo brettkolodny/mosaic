@@ -38,7 +38,6 @@ export default function Main(props) {
     <div id="network-dd" onClick={toggleNetworkList}>
       <div id="current-network">{currentNet.icon}</div>
       <div id="network-dd-items" className={showNetworks ? "show" : "hidden"}>
-        Networks
         {createNetworkList()}
       </div>
     </div>

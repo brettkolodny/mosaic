@@ -6,11 +6,10 @@ export default function Main(props) {
   const { api, currentAccount, setShowSend } = props;
 
   const [toAddress, setToAddress] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(null);
 
   const sendAmount = async () => {
-    const amountNumber = Number.parseInt(amount);
-    console.log(amountNumber, toAddress);
+    const amountNumber = Number.parseInt(amount) * 100000000000000;
     const unsub = await api.tx.balances
       .transfer(toAddress, amountNumber)
       .signAndSend(currentAccount, ({ status, events, dispatchError }) => {
@@ -33,6 +32,7 @@ export default function Main(props) {
           if (status.isInBlock || status.isFinalized) {
             console.log("in block");
             unsub();
+            setShowSend(false);
           }
         }
       });
@@ -60,6 +60,7 @@ export default function Main(props) {
           className="input-valid"
           type="text"
           value={amount}
+          placeholder="Units"
           onChange={(e) => {
             const value = e.target.value;
 

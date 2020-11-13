@@ -3,12 +3,14 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #f5f7fa;
 }
 
 #title {
   margin-top: 20vh;
   text-align: center;
   font-size: 64px;
+  color: #bc0a6f;
 }
 
 #login-form {
@@ -22,11 +24,12 @@
   margin: 0 auto;
   width: 272px;
   height: 48px;
-  background-color: lightgray;
+  background-color: #e4e7eb;
   border-radius: 100px;
   border: none;
   padding-left: 10px;
   font-size: 24px;
+  color: #bc0a6f;
 }
 
 #password-input:focus {

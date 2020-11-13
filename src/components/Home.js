@@ -6,7 +6,6 @@ import { ReactComponent as DevIcon } from "../svg/dev-icon.svg";
 import { ReactComponent as SendSvg } from "../svg/icon-send.svg";
 import { ReactComponent as QRSvg } from "../svg/icon-qr-code.svg";
 import { ReactComponent as LockIcon } from "../svg/icon-lock.svg";
-import { ReactComponent as DownIcon } from "../svg/icon-cheveron-down.svg";
 import AccountInfo from "../components/AccountInfo";
 import { ApiPromise, WsProvider } from "@polkadot/api";
 import Identicon from "@polkadot/react-identicon";
@@ -15,9 +14,7 @@ import { Keyring } from "@polkadot/keyring";
 import { cryptoWaitReady } from "@polkadot/util-crypto";
 import AddressQR from "./AddressQR";
 import "../css/Home.scss";
-import { findRenderedDOMComponentWithClass } from "react-dom/test-utils";
-
-// import { mnemonicGenerate } from "@polkadot/util-crypto";
+const browser = require("webextension-polyfill");
 
 export default function Main(props) {
   const { setLoggedIn } = props;
@@ -71,12 +68,15 @@ export default function Main(props) {
       await cryptoWaitReady();
       const keyring = new Keyring({ type: "sr25519", ss58Format: 2 });
 
-      const alice = keyring.addFromUri("//Alice", { name: "Alice" });
-      const bob = keyring.addFromUri("//Bob", { name: "Bob" });
-      const charlie = keyring.addFromUri("//Charlie", { name: "Charlie" });
+      const mnemonic = await browser.storage.local.get("mnemonic");
+      const name = await browser.storage.local.get("name");
 
-      setAccounts([alice, bob, charlie]);
-      setCurrentAccount(alice);
+      const account = keyring.addFromUri(mnemonic.mnemonic, {
+        name: name.name,
+      });
+
+      setAccounts([account]);
+      setCurrentAccount(account);
     }
 
     getAccount();
