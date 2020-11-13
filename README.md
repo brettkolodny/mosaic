@@ -1,4 +1,5 @@
 # Mosaic
+An extension wallet with sending capabilities.
 
 ## Installation
 1) Install the dependencies with `yarn`
